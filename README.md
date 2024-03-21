@@ -19,3 +19,15 @@ git clone https://github.com/Nyfeu/MEF_AnaliseEstrutural.git
 ``` 
 3. Open MATLAB and navigate to the cloned directory.
 4. Open the main APP (application > controller > gui > MainView.mlapp) and press RUN (or F5) using MATLAB's AppDesigner.
+
+## File Structure
+- **application:** This directory contains all the program files.
+- **controller:** This directory includes both UI (User Interface) and GUI (Graphical User Interface) scripts and views.
+- **model:**
+  - **entities:** This directory contains the definitions of each type of element and geometrical entities.
+  - **services:** This directory contains the solver, settings, and error message definitions.
+
+## Bibliography
+- KATTAN, Peter I. MATLAB guide to finite elements: an interactive approach. Springer Science & Business Media, 2010.
+- KWON, Young W.; BANG, Hyochoong. The finite element method using MATLAB. CRC press, 2018.
+- LOGAN, Daryl L. A first course in the finite element method. Thomson, 2011.
