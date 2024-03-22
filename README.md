@@ -32,23 +32,49 @@ git clone https://github.com/Nyfeu/MEF_AnaliseEstrutural.git
 
 There will be presented a problem using hexahedral element (with 8 nodes) which will be solved using this app. The problem to be described is problem 9.9.1 from Kwon & Bang (2018), which considers a cube with 1 meter edge length and a total force of 1000 kN applied in the Z-axis orientation - as shown in the figure below. The primary objective is to obtain the displacements and global forces.
 
-**[add image]**
+</br>
+<div align="center">
+  <img src="images/problem.png" alt="Problem" width="500">
+</div>
+</br>
 
 Notice that the resultant force will be equally divided among the four top nodes. Therefore, wich node will have an applied force of 250 kN magnitude. The connectivity matrix is shown in table below:
 
-**[add_table]**
+| Element number | Node $i$ | Node $j$ | Node $m$ | Node $n$ | Node $o$ | Node $p$ | Node $q$ | Node $r$ |
+|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+| 1 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 
 Having recognized the model, it's now possible to proceed with the problem. The next step is to apply the developed software to the problem. When its main view opens, there will be a window like the one shown below:
 
-**[add image]**
+</br>
+<div align="center">
+  <img src="images/main_view.png" alt="Main View" width="500">
+</div>
+</br>
 
 In this interface, all possible settings and data are available. It´s necessary to change the mode to three-dimensional analysis (3D) in order to use the HEX8. For that, simply press the "Toggle 2D/3D" button.
 
-Pressing the first icon (*Add material*) it's possible to add a material to the problem. It's also possible to right-click the "Material" item on the left tree and select the "*Add material*" action. Then, the material will be defined in terms of its name, elasticity modulus (E) and Poisson's ratio ($\nu$).
+Pressing the first icon (*Add material*) it's possible to add a material to the problem. It's also possible to right-click the "Material" item on the left tree and select the "Add material" action from the context menu. Then, the material will be defined in terms of its name, elasticity modulus (E) and Poisson's ratio ($\nu$).
 
+Then, when the "Add Node" button or action is selected, the user can add an ordered triple (X,Y,Z) - denoting the node's position, as well as configure the type of constraint existing at that node, which can be: Free; RollerX; RollerY; RollerZ; RollerXY; RollerXZ; RollerYZ; and Pinned.
 
-**[completar]**
+Now, the next step is to add the element itself, the HEX8. To do so, press the "Add Element" button or select the "Add Element" action from the left tree. Then, the forces can be added. It's necessary to define the orientation, direction, and magnitude, as well as the node at which the force is applied.
 
+With the problem completely set up, the interface will look as shown by the figure bellow:
+
+</br>
+<div align="center">
+  <img src="images/modelling.png" alt="Modeling" width="500">
+</div>
+</br>
+
+Finally, the button "Run Model (Calculate)" can be pressed, or, as with the previous buttons, it can be initiated from the context menu of the "Results" item on the left tree. Then, the displacement results will appear graphically where the model was previously displayed - the displacements are merely illustrative. Additionally, the forces can be viewed in the left tree under the "Results" item.
+
+</br>
+<div align="center">
+  <img src="images/results.png" alt="Results" width="500">
+</div>
+</br>
 
 ## Bibliography
 - KATTAN, Peter I. MATLAB guide to finite elements: an interactive approach. Springer Science & Business Media, 2010.
